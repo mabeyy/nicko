@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nicko's Website</title>
+  <title>Nicko's PHINMA Experience</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Tailwind config for custom font -->
@@ -12,25 +12,28 @@
       theme: {
         extend: {
           fontFamily: {
-            'custom-big': ['"YAEp6DuM3Gw_0"', 'auto']
+            title: ['"Poppins"', 'sans-serif'],
+            body: ['"Open Sans"', 'sans-serif']
+          },
+          colors: {
+            primary: '#1C7037',
+            accent: '#FFBD59',
           }
         }
       }
     }
   </script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
   <style>
-    .fade-in {
+    .fade-up {
       opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.8s ease-out forwards;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease-out forwards;
     }
-
-    .delay-1 { animation-delay: 0.2s; }
-    .delay-2 { animation-delay: 0.4s; }
-    .delay-3 { animation-delay: 0.6s; }
-
-    @keyframes fadeInUp {
+    .delay-1 { animation-delay: 0.3s; }
+    .delay-2 { animation-delay: 0.6s; }
+    .delay-3 { animation-delay: 0.9s; }
+    @keyframes fadeUp {
       to {
         opacity: 1;
         transform: translateY(0);
@@ -38,162 +41,150 @@
     }
   </style>
 </head>
-<body class="bg-white text-gray-800 font-sans leading-relaxed scroll-smooth">
 
-  <!-- Hero Header -->
-<header class="relative h-screen bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?university');">
-  <div class="absolute inset-0 bg-[#1C7037]/90"></div>
-  <div class="relative z-10 flex flex-col md:flex-row items-center justify-between h-full px-6 md:px-12 fade-in delay-1">
-    
-    <!-- Left Image (COC Logo) -->
-    <div class="hidden md:block w-1/4">
-      <img src="assets/coc.png" alt="COC Logo" class="w-full max-w-[250px] mx-auto drop-shadow-xl">
-    </div>
+<body class="bg-white text-gray-800 font-body scroll-smooth">
 
-    <!-- Center Text -->
-    <div class="text-center text-white flex-1 px-4 space-y-4">
-      <h1 class="text-4xl md:text-6xl font-extrabold text-[#FFBD59] drop-shadow-md font-custom-big">
-        PHINMA CAGAYAN DE ORO COLLEGE
-      </h1>
-      <p class="text-lg md:text-xl italic">The school where your goals can be granted!</p>
-    </div>
+  <!-- HERO -->
+  <header class="relative bg-cover bg-center py-20" style="background-image: url('https://source.unsplash.com/1600x900/?university');">
+  <div class="absolute inset-0 bg-primary/90"></div>
+  <div class="relative z-10 flex items-center justify-center px-6">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between fade-up delay-1 space-y-6 md:space-y-0">
+      
+      <!-- Left Logo -->
+      <div class="hidden md:block w-1/4">
+        <img src="assets/coc.png" alt="COC Logo" class="w-full max-w-[250px] mx-auto drop-shadow-xl">
+      </div>
 
-    <!-- Right Image (Phinma Logo) -->
-    <div class="hidden md:block w-1/4">
-      <img src="assets/phinma.png" alt="Phinma Logo" class="w-full max-w-[400px] mx-auto drop-shadow-xl">
+      <!-- Text -->
+      <div class="text-center text-white flex-1 px-4 space-y-4">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-accent drop-shadow-md font-title">PHINMA CAGAYAN DE ORO COLLEGE</h1>
+        <p class="text-lg md:text-xl italic">The school where your goals can be granted!</p>
+      </div>
+
+      <!-- Right Logo -->
+      <div class="hidden md:block w-1/4">
+        <img src="assets/phinma.png" alt="Phinma Logo" class="w-full max-w-[400px] mx-auto drop-shadow-xl">
+      </div>
     </div>
   </div>
 </header>
 
-
-  <!-- Authors -->
-  <section class="py-16 fade-in delay-2 bg-gray-100">
-    <div class="max-w-4xl mx-auto text-center space-y-4 px-6">
-      <h3 class="text-2xl font-semibold text-[#1C7037] font-custom-big hover:scale-105 transition-transform">Nicko Domondong</h3>
+  <!-- AUTHOR -->
+  <section class="py-20 bg-gray-50 text-center fade-up delay-2">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-4xl font-title text-primary hover:scale-105 transition-transform">Nicko Domondong</h2>
+      <p class="mt-2 text-gray-600 text-lg">BSBA Student • Scholarship Recipient • Passionate Learner</p>
     </div>
   </section>
 
-  <!-- Values -->
-  <section class="bg-[#1C7037] text-white py-20 px-6 fade-in delay-3">
-    <div class="max-w-5xl mx-auto text-center space-y-6">
-      <img src="assets/1.jpg" alt="COC Values" class="w-full h-56 object-cover rounded-xl shadow-lg">
-      <h2 class="text-4xl font-bold text-[#FFBD59] font-custom-big">COC Exhibits Its Values</h2>
-      <p class="text-lg max-w-3xl mx-auto">
-        Cagayan de Oro College, or COC, is noted for upholding its core values of <strong>competence, integrity, openness, patriotism, and devotion.</strong> These principles are deeply embedded in the organization and manifest themselves in the daily conduct of its faculty, staff, and students. These values establish COC's identity, guide its members, and motivate it to strive for excellence and meaningful influence.
-      </p>
-    </div>
-  </section>
-
-  <!-- Events -->
-  <section class="bg-white px-6 py-20 fade-in">
-    <div class="max-w-5xl mx-auto text-center space-y-6">
-      <h2 class="text-3xl font-bold text-[#1C7037] font-custom-big">Events</h2>
-      <p class="text-lg">
-        Events are held to help students develop their abilities while also having fun. It teaches students how to handle or solve difficulties and develops competence for future demands.
-      </p>
-      <img src="assets/2.jpg" alt="Event Photo" class="w-full h-56 object-cover rounded-xl shadow-lg">
-    </div>
-  </section>
-
-  <!-- Buildings -->
-  <section class="bg-[#1C7037] text-white px-6 py-20 fade-in">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-[#FFBD59] mb-10 font-custom-big">Main Buildings in PHINMA COC</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white text-gray-800 p-5 rounded-lg shadow-lg hover:shadow-xl transition text-center">
-          <img src="assets/ph.jpg" alt="Phinma Hall" class="w-full h-40 object-cover rounded mb-4">
-          <p class="font-semibold">Phinma Hall (PH)</p>
-        </div>
-        <div class="bg-white text-gray-800 p-5 rounded-lg shadow-lg hover:shadow-xl transition text-center">
-          <img src="assets/ms.jpg" alt="Main South" class="w-full h-40 object-cover rounded mb-4">
-          <p class="font-semibold">Main South (MS)</p>
-        </div>
-        <div class="bg-white text-gray-800 p-5 rounded-lg shadow-lg hover:shadow-xl transition text-center">
-          <img src="assets/mn.jpg" alt="Main North" class="w-full h-40 object-cover rounded mb-4">
-          <p class="font-semibold">Main North (MN)</p>
-        </div>
-        <div class="bg-white text-gray-800 p-5 rounded-lg shadow-lg hover:shadow-xl transition text-center">
-          <img src="assets/mw.jpg" alt="Main West" class="w-full h-40 object-cover rounded mb-4">
-          <p class="font-semibold">Main West (MW)</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Marketing Management -->
-  <section class="bg-white px-6 py-20 fade-in">
-    <div class="max-w-4xl mx-auto text-center space-y-4">
-      <h2 class="text-3xl font-bold text-[#1C7037] font-custom-big">What is Marketing Management?</h2>
-      <p class="text-lg">
-        The art and strategy of understanding people's needs, wants, and how to meaningfully reach them is known as marketing management. It goes beyond simply making sales. It's all about making connections. It all comes down to understanding your audience, crafting an engaging narrative, and gradually establishing credibility. Marketing management helps you put ideas into action, whether you're managing a brand, operating a small firm, or are just getting started in the business world. 
-      </p>
-      <p class="text-lg">
-        Creating value for customers while assisting in the expansion of the company is the aim of marketing management. It's about focusing on the consumer while yet making a profit.
-      </p>
-    </div>
-  </section>
-
-  <!-- Benefits & Opportunities -->
-  <section class="bg-[#1C7037] text-white px-6 py-20 fade-in">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-center gap-12 text-left">
-      
-      <div class="w-full md:w-1/2">
-        <h3 class="text-2xl font-semibold text-[#FFBD59] mb-4 font-custom-big">Benefits:</h3>
-        <ul class="list-disc list-inside space-y-2 text-base">
-          <li>Improve your understanding of others</li>
-          <li>Make more informed choices</li>
-          <li>Expand your company</li>
-          <li>Create genuine connections</li>
-          <li>Make the most of your resources</li>
-          <li>Advance your career</li>
-          <li>Remain flexible</li>
-          <li>Make an impression that lasts</li>
-        </ul>
-      </div>
-
-      <div class="w-full md:w-1/2">
-        <h3 class="text-2xl font-semibold text-[#FFBD59] mb-4 font-custom-big">Opportunities:</h3>
-        <ul class="list-disc list-inside space-y-2 text-base">
-          <li>Launch a company</li>
-          <li>Work in any sector of the economy</li>
-          <li>Promotion and branding</li>
-          <li>Market analysis</li>
-          <li>Business development and sales</li>
-          <li>Opportunities for freelance work</li>
-          <li>Jobs abroad</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Experiences -->
-  <section class="bg-white px-6 py-20 fade-in">
-    <div class="max-w-5xl mx-auto space-y-10">
-      <h2 class="text-3xl font-bold text-[#1C7037] text-center font-custom-big">Our Experiences</h2>
+  <!-- CORE VALUES -->
+  <section class="bg-primary text-white py-24 px-6 fade-up delay-3">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <img src="assets/1.jpg" alt="Core Values" class="w-full rounded-lg shadow-xl h-64 object-cover">
       <div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition space-y-3">
-          <h3 class="text-xl font-semibold text-[#FFBD59] font-custom-big">Nicko Domondong's Experience</h3>
-          <p>My journey at PHINMA COC has been filled with growth, laughter, and meaningful experiences. From the very first day, I felt welcomed by the community—everyone, from the instructors to my fellow students, made it easy to feel at home.</p>
-          <p>One of the moments I’ll always remember was during a campus event where we showcased our talents and bonded with other students. It was more than just fun—it reminded me that learning doesn’t only happen in the classroom. It happens in the friendships we build and the confidence we gain from trying new things.</p>
-          <p>As a BSBA student, I’ve been challenged to think more critically and apply what I’ve learned in real-world scenarios. The lessons here aren’t just academic—they’re life lessons that I know will help shape my future. The instructors don’t just teach; they guide and encourage us every step of the way.</p>
-          <p>I’m also very thankful to be a recipient of the HK Scholarship. Having 50% of my tuition covered has really helped lessen the financial burden on my family and allowed me to focus on what matters most—my education and personal development.</p>
-          <p>PHINMA COC is more than just a school to me. It’s a place where I’ve discovered my potential, found true friends, and built a clearer vision of the future I want to achieve.</p>
-        </div>
+        <h3 class="text-3xl font-title text-accent mb-4">Core Values of COC</h3>
+        <p class="text-lg">Cagayan de Oro College, or COC, is noted for upholding its core values of <strong>competence, integrity, openness, patriotism, and devotion.</strong> These principles are deeply embedded in the organization and manifest themselves in the daily conduct of its faculty, staff, and students. These values establish COC's identity, guide its members, and motivate it to strive for excellence and meaningful influence.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-[#1C7037] text-white py-12 fade-in">
-    <div class="max-w-5xl mx-auto text-center px-6 space-y-2">
-      <h1 class="text-3xl font-bold text-[#FFBD59] font-custom-big hover:scale-110 transition-transform">Padayon!</h1>
-      <p>Max Suniel Street, Carmen, Cagayan de Oro City, 9000, Misamis Oriental</p>
-      <p>0917-376-5105</p>
+  <!-- EVENTS -->
+  <section class="bg-white py-20 px-6 fade-up delay-1">
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+      <h2 class="text-3xl md:text-4xl font-title text-primary">Campus Life & Events</h2>
+      <p class="text-lg text-gray-700">Our campus events help students explore their passions while preparing for future careers.</p>
+      <img src="assets/2.jpg" alt="Event Image" class="rounded-xl shadow-md w-full h-64 object-cover">
+    </div>
+  </section>
+
+  <!-- BUILDINGS -->
+  <section class="bg-gray-100 py-24 px-6 fade-up delay-2">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-title text-primary text-center mb-12">Explore Our Main Buildings</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-lg p-4 shadow-lg hover:shadow-xl text-center border-t-4 border-primary">
+        <img src="assets/ph.jpg" class="w-full h-40 object-cover rounded" alt="PH">
+        <h4 class="mt-4 font-semibold text-lg">Phinma Hall (PH)</h4>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-lg hover:shadow-xl text-center border-t-4 border-primary">
+        <img src="assets/ms.jpg" class="w-full h-40 object-cover rounded" alt="MS">
+        <h4 class="mt-4 font-semibold text-lg">Main South (MS)</h4>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-lg hover:shadow-xl text-center border-t-4 border-primary">
+        <img src="assets/mn.jpg" class="w-full h-40 object-cover rounded" alt="MN">
+        <h4 class="mt-4 font-semibold text-lg">Main North (MN)</h4>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-lg hover:shadow-xl text-center border-t-4 border-primary">
+        <img src="assets/mw.jpg" class="w-full h-40 object-cover rounded" alt="MW">
+        <h4 class="mt-4 font-semibold text-lg">Main West (MW)</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- MARKETING MGMT -->
+  <section class="bg-white py-20 px-6 fade-up delay-3">
+    <div class="max-w-3xl mx-auto text-center space-y-6">
+      <h2 class="text-3xl font-title text-primary">Why Marketing Management?</h2>
+      <p class="text-lg">Marketing management is the art and method of comprehending people's requirements and desires and figuring out how to effectively reach them. It's not only about making sales. It all comes down to connecting. It all boils down to knowing your audience, telling a compelling story, and building credibility over time. Whether you're starting out in business, running a small company, or managing a brand, marketing management helps you turn ideas into action.</p>
+      <p class="text-lg">The goal of marketing management is to add value for consumers while supporting business growth. It's about making a profit while keeping the customer in mind.</p>
+    </div>
+  </section>
+
+  <!-- BENEFITS & OPPORTUNITIES -->
+  <section class="bg-primary text-white py-24 px-6 fade-up delay-2">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+      <div>
+        <h3 class="text-2xl font-title text-accent mb-4">Benefits</h3>
+        <ul class="space-y-2 list-inside list-disc">
+          <li>Become more empathetic toward others</li>
+          <li>Make wiser decisions</li>
+          <li>Grow your business</li>
+          <li>Make sincere connections</li>
+          <li>Utilize your resources as much as possible</li>
+          <li>Develop your career</li>
+          <li>Stay adaptable</li>
+          <li>Create a lasting impression</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-2xl font-title text-accent mb-4">Opportunities</h3>
+        <ul class="space-y-2 list-inside list-disc">
+          <li>Start a business</li>
+          <li>Work in any economic sector</li>
+          <li>Branding and promotion</li>
+          <li>Analysis of the market</li>
+          <li>Sales and business development</li>
+          <li>Possibilities for independent employment</li>
+          <li>Jobs overseas</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES -->
+  <section class="bg-white py-20 px-6 fade-up delay-3">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-title text-primary text-center mb-8">Student Journey</h2>
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md space-y-4">
+        <h3 class="text-xl font-title text-accent">Nicko's Reflections</h3>
+        <p>My journey at PHINMA COC has been filled with growth, laughter, and meaningful experiences. From the very first day, I felt welcomed by the community—everyone, from the instructors to my fellow students, made it easy to feel at home.</p>
+        <p>One of the moments I’ll always remember was during a campus event where we showcased our talents and bonded with other students. It was more than just fun—it reminded me that learning doesn’t only happen in the classroom. It happens in the friendships we build and the confidence we gain from trying new things.</p>
+        <p>As a BSBA student, I’ve been challenged to think more critically and apply what I’ve learned in real-world scenarios. The lessons here aren’t just academic—they’re life lessons that I know will help shape my future. The instructors don’t just teach; they guide and encourage us every step of the way.</p>
+        <p>I’m also very thankful to be a recipient of the HK Scholarship. Having 50% of my tuition covered has really helped lessen the financial burden on my family and allowed me to focus on what matters most—my education and personal development.</p>
+        <p>PHINMA COC is more than just a school to me. It’s a place where I’ve discovered my potential, found true friends, and built a clearer vision of the future I want to achieve.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary text-white text-center py-12 fade-up delay-1">
+    <div class="space-y-3 max-w-3xl mx-auto">
+      <h2 class="text-3xl font-title text-accent">Padayon!</h2>
+      <p>Max Suniel Street, Carmen, Cagayan de Oro City, 9000</p>
+      <p>Contact: 0917-376-5105</p>
       <p>
-        <a href="https://www.phinma.edu.ph/" class="text-yellow-300 underline hover:text-yellow-400 transition duration-300" target="_blank">
-          phinma.edu.ph
-        </a>
+        <a href="https://www.phinma.edu.ph/" target="_blank" class="text-yellow-300 underline hover:text-yellow-400 transition">phinma.edu.ph</a>
       </p>
     </div>
   </footer>
